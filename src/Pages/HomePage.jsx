@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const getThirtyPokemon = async() => {
+export const getPokemon = async() => {
   let response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=30")
   return response.data.results
 }
@@ -10,11 +10,11 @@ export const Home = () => {
   const [myPokemon, setMyPokemon] = useState([])
 
   useEffect(()=>{
-    const getPokemon = async() =>{
-      const pokemon = await getThirtyPokemon()
+    const getThirtyPokemon = async() =>{
+      const pokemon = await getPokemon()
       setMyPokemon(pokemon)
     }
-    getPokemon()
+    getThirtyPokemon()
   }, [])
 
   useEffect(()=>{
