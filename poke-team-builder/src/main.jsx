@@ -1,13 +1,9 @@
-import { Header } from './components/Header';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
+import Router from './Router'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <Header>
-            <App />
-        </Header>
-    </React.StrictMode>
-);
+  <RouterProvider router={Router} />
+)
