@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Home } from './pages/HomePage';
-import { Team } from './pages/TeamPage';
+import { Home } from './Pages/HomePage';
+import { Team } from './Pages/TeamPage';
 import App from './App'
 
 const Router = createBrowserRouter([
