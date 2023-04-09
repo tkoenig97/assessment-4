@@ -1,32 +1,22 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
-export const getPokemon = async() => {
-  let response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=30")
-  return response.data.results
-}
+export const getPokemon = async () => {
+  let response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=30");
+  return response.data.results;
+};
 
-export const Home = () => {
-  const [myPokemon, setMyPokemon] = useState([])
-
-  useEffect(()=>{
-    const getThirtyPokemon = async() =>{
-      const pokemon = await getPokemon()
-      setMyPokemon(pokemon)
-    }
-    getThirtyPokemon()
-  }, [])
-
-  useEffect(()=>{
-    console.log(myPokemon)
-  },[myPokemon])
+export const HomePage = () => {
+  const myPokemon = useLoaderData(getPokemon);
 
   return (
-    <div>
-      <h1>HOME</h1>
-      {myPokemon.map((pokemon, idx)=>(
-        <p key={idx}>{pokemon.name}</p>
+    <ol>
+      <h2>HOME</h2>
+      {myPokemon.map((pokemon, idx) => (
+        <li key={idx}>
+          <a href={`/pokemon/${pokemon.name}/`}>{pokemon.name}</a>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 };

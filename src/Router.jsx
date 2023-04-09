@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Home } from './Pages/HomePage';
+import { HomePage, getPokemon } from './Pages/HomePage';
 import { Team } from './Pages/TeamPage';
 import App from './App'
 
@@ -10,7 +10,8 @@ const Router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home />
+                element: <HomePage />,
+                loader: getPokemon
             },
             {
                 path: '/team',
