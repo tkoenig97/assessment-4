@@ -1,5 +1,7 @@
+import { PokemonCard } from "../components/PokemonCard"
+
 export const PokemonPage = () => {
     return(
-        <h1>Pokemon Page</h1>
+        <PokemonCard />
     )
 }
