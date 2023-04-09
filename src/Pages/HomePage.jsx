@@ -11,7 +11,7 @@ export const HomePage = () => {
 
   return (
     <ol>
-      <h2>HOME</h2>
+      <h2>Home</h2>
       {myPokemon.map((pokemon, idx) => (
         <li key={idx}>
           <a href={`/pokemon/${pokemon.name}/`}>{pokemon.name}</a>
