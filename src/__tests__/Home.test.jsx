@@ -83,7 +83,7 @@ describe('HomePage.jsx', () => {
         expect(home.children[3].children[0].props.href).toBe(
             '/pokemon/pikachu/'
         );
-        expect(home.children[3].children[0].children[0]).toBe('pikachu');
+        expect(home.children[3].children[0].children[0]).toBe('Pikachu');
         // expect to have 8 children inside of Home.jsx
         expect(home.children.length).toBe(8);
     });

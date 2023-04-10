@@ -18,8 +18,8 @@ export const PokemonPage = () => {
 
     return (
         <div>
-            <h1>{capFirstLetter(pokemonDetails.name)}</h1>
-            <PokemonCard />
+            <h2>{capFirstLetter(pokemonDetails.name)}</h2>
+            <PokemonCard data={pokemonDetails}/>
         </div>
     );
 };
