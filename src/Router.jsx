@@ -19,8 +19,8 @@ const Router = createBrowserRouter([
                 element: <PokemonTeamPage />
             },
             {
-                path: '/pokemon/:id/',
-                element: <PokemonPage />
+                path: '/pokemon/:name/',
+                element: <PokemonPage />,
             }
         ]
     }

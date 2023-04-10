@@ -16,7 +16,7 @@ export const PokemonCard = () => {
                 <Card.Title>Pokemon Name</Card.Title>
                 <Card.Text>Moves</Card.Text>
                 <Button>Home</Button>
-                <Button>Catch/Release</Button>
+                <Button>Catch / Release</Button>
             </Card.Body>
         </Card>
     )
