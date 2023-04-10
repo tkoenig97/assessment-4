@@ -7,7 +7,7 @@ export const getPokemon = async () => {
 };
 
 export const HomePage = () => {
-  const myPokemon = useLoaderData(getPokemon);
+  const myPokemon = useLoaderData();
 
   return (
     <ol>

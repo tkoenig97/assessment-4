@@ -11,7 +11,7 @@ export const PokemonCard = () => {
     }
 
     return (
-        <Card border="dark" style={{ width: '18rem' }}>
+        <Card className='card' border="dark" style={{ width: '18rem' }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
