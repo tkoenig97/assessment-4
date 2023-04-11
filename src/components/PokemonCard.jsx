@@ -1,10 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import capFirstLetter from '../utilities';
-import { useNavigate } from 'react-router-dom';
 
 export const PokemonCard = (props) => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const addOrDropPokemonToMyTeam = () => {};
 
@@ -23,7 +23,7 @@ export const PokemonCard = (props) => {
             flying: 'cyan',
             ice: 'cyan',
             normal: 'gray',
-            bug: 'lime'
+            bug: 'lime',
         };
     };
 
