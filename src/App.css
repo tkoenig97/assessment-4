@@ -7,6 +7,18 @@
 }
 
 /* PokemonCard.jsx */
+.card {
+    text-align: center;
+}
+
 .card-button {
     margin: 10px;
 }
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }

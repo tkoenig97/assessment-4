@@ -51,8 +51,14 @@ export const PokemonCard = (props) => {
                     src={props.data.sprites.front_default}
                 />
                 <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    <div className='row'>
+                        <div className='column'>{capFirstLetter(props.data.moves[0].move.name)}</div>
+                        <div className='column'>{capFirstLetter(props.data.moves[1].move.name)}</div>
+                    </div>
+                    <div className='row'>
+                        <div className='column'>{capFirstLetter(props.data.moves[2].move.name)}</div>
+                        <div className='column'>{capFirstLetter(props.data.moves[3].move.name)}</div>
+                    </div>
                 </Card.Text>
                 <Button
                     className="card-button"

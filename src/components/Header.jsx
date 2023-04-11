@@ -6,6 +6,7 @@ export const Header = ({ caughtPokemon = [] }) => {
         let response = await axios.get(
             `https://pokeapi.co/api/v2/pokemon/${pokemon}`
         );
+        console.log(response.data.results)
         return response.data.results;
     };
 
@@ -16,7 +17,7 @@ export const Header = ({ caughtPokemon = [] }) => {
             <Link to={'/team/'}>My Team #{caughtPokemon.length}</Link>
             <form onSubmit={searchForPokemon}>
                 <input placeholder="search"></input>
-                <button type="submit">Search</button>
+                <button type="submit" onClick={searchForPokemon}>Search</button>
             </form>
         </div>
     );

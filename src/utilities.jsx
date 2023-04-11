@@ -1,3 +1,5 @@
 export default function capFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.replace(/(^|\-)\w/g, function(m) {
+        return m.toUpperCase();
+      });
 }
