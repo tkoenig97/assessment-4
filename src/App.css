@@ -11,6 +11,11 @@
     text-align: center;
 }
 
+.sprite {
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
 .card-button {
     margin: 10px;
 }

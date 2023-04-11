@@ -47,6 +47,7 @@ export const PokemonCard = (props) => {
             <Card.Body>
                 <Card.Title>{capFirstLetter(props.data.name)}</Card.Title>
                 <Card.Img
+                    className="sprite"
                     variant="top"
                     src={props.data.sprites.front_default}
                 />
