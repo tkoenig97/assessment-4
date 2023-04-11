@@ -1,7 +1,10 @@
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-export const Header = ({ caughtPokemon = [] }) => {
+export const Header = () => {
+    const [caughtPokemon, setCaughtPokemon] = useState([])
+    const [pokemonCount, setPokemonCount] = useState(caughtPokemon.length);
     const navigate = useNavigate();
 
     const searchForPokemon = async (pokemon) => {
@@ -19,11 +22,15 @@ export const Header = ({ caughtPokemon = [] }) => {
         navigate(`/pokemon/${data.name}`);
     };
 
+    useEffect(() => {
+        setPokemonCount(caughtPokemon.length)
+    }, [caughtPokemon])
+
     return (
         <div className="header">
             <h1>POKEDEX</h1>
             <Link to={'/'}>Home</Link>
-            <Link to={'/team/'}>My Team #{caughtPokemon.length}</Link>
+            <Link to={'/team'}>My Team #{pokemonCount}</Link>
             <form onSubmit={handleSearch}>
                 <input name="search" placeholder="Search"></input>
                 <button type="submit">Search</button>

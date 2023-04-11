@@ -6,7 +6,9 @@ import capFirstLetter from '../utilities';
 export const PokemonCard = (props) => {
     const navigate = useNavigate();
 
-    const addOrDropPokemonToMyTeam = () => {};
+    const addOrDropPokemonToMyTeam = () => {
+        
+    };
 
     const pickBackGroundColor = () => {
         const colorAssigner = {

@@ -1,3 +1,13 @@
+/* App.jsx */
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
 /* Header.jsx */
 .header {
     display: flex;
