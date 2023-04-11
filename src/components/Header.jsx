@@ -16,7 +16,7 @@ export const Header = ({ caughtPokemon = [] }) => {
         const pokemon = event.target.elements.search.value;
         const data = await searchForPokemon(pokemon);
         console.log(data);
-        navigate(`/pokemon/${data.name}`)
+        navigate(`/pokemon/${data.name}`);
     };
 
     return (
