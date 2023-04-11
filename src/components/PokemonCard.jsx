@@ -10,21 +10,28 @@ export const PokemonCard = (props) => {
 
     const pickBackGroundColor = () => {
         const colorAssigner = {
-            grass: 'green',
-            fire: 'red',
+            grass: 'lime',
+            fire: 'orange',
             electric: 'yellow',
-            ground: 'brown',
-            rock: 'brown',
+            ground: 'tan',
+            rock: 'sienna',
             water: 'blue',
-            psychic: 'purple',
+            psychic: 'hotpink',
             poison: 'purple',
-            dragon: 'silver',
+            dragon: 'blueviolet',
             steel: 'silver',
-            flying: 'cyan',
+            flying: 'mediumorchid',
             ice: 'cyan',
             normal: 'gray',
-            bug: 'lime',
+            bug: 'olivedrab',
+            fighting: 'red',
+            ghost: 'darkslateblue',
+            dark: 'dimgrey',
+            fairy: 'lightpink',
         };
+
+        let type = props.data.types[0].type.name;
+        return colorAssigner[type];
     };
 
     const navigateHome = () => {
@@ -32,7 +39,11 @@ export const PokemonCard = (props) => {
     };
 
     return (
-        <Card className="card" border="dark" style={{ width: '18rem' }}>
+        <Card
+            className="card"
+            border="dark"
+            style={{ width: '18rem', background: `${pickBackGroundColor()}` }}
+        >
             <Card.Body>
                 <Card.Title>{capFirstLetter(props.data.name)}</Card.Title>
                 <Card.Img
