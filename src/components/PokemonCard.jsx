@@ -1,13 +1,32 @@
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { TeamContext } from './TeamContext';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import capFirstLetter from '../utilities';
 
 export const PokemonCard = (props) => {
+    const { caughtPokemon, setCaughtPokemon } = useContext(TeamContext);
     const navigate = useNavigate();
 
     const addOrDropPokemonToMyTeam = () => {
-        
+        const pokemonIndex = caughtPokemon.findIndex(
+            (pokemon) => pokemon.name === props.data.name
+        );
+
+        if (pokemonIndex === -1) {
+            // Pokemon is not in caughtPokemon array, add it
+            if (caughtPokemon.length < 6) {
+                setCaughtPokemon((prevState) => prevState.concat(props.data));
+            } else {
+                alert('Your team is full!');
+            }
+        } else {
+            // Pokemon is already in caughtPokemon array, remove it
+            setCaughtPokemon((prevState) =>
+                prevState.filter((pokemon) => pokemon.name !== props.data.name)
+            );
+        }
     };
 
     const pickBackGroundColor = () => {
@@ -78,7 +97,11 @@ export const PokemonCard = (props) => {
                 >
                     Home
                 </Button>
-                <Button className="card-button" variant="primary">
+                <Button
+                    className="card-button"
+                    variant="primary"
+                    onClick={addOrDropPokemonToMyTeam}
+                >
                     Catch / Release
                 </Button>
             </Card.Body>

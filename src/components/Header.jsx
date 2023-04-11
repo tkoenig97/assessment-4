@@ -1,9 +1,11 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { TeamContext } from './TeamContext';
 
 export const Header = () => {
-    const [caughtPokemon, setCaughtPokemon] = useState([])
+    const { caughtPokemon } = useContext(TeamContext)
+
     const [pokemonCount, setPokemonCount] = useState(caughtPokemon.length);
     const navigate = useNavigate();
 
