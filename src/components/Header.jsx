@@ -9,7 +9,7 @@ export const Header = () => {
 
     const searchForPokemon = async (pokemon) => {
         let response = await axios.get(
-            `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+            `https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`
         );
         return response.data;
     };
