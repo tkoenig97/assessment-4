@@ -5,7 +5,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 3%;
 }
 
 /* Header.jsx */
@@ -37,4 +37,16 @@
 
 .column {
     flex: 50%;
+}
+
+/* PokemonTeamPage.jsx */
+.team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    margin: 2%;
 }
