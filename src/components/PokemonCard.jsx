@@ -51,13 +51,21 @@ export const PokemonCard = (props) => {
                     src={props.data.sprites.front_default}
                 />
                 <Card.Text>
-                    <div className='row'>
-                        <div className='column'>{capFirstLetter(props.data.moves[0].move.name)}</div>
-                        <div className='column'>{capFirstLetter(props.data.moves[1].move.name)}</div>
+                    <div className="row">
+                        <div className="column">
+                            {capFirstLetter(props.data.moves[0].move.name)}
+                        </div>
+                        <div className="column">
+                            {capFirstLetter(props.data.moves[1].move.name)}
+                        </div>
                     </div>
-                    <div className='row'>
-                        <div className='column'>{capFirstLetter(props.data.moves[2].move.name)}</div>
-                        <div className='column'>{capFirstLetter(props.data.moves[3].move.name)}</div>
+                    <div className="row">
+                        <div className="column">
+                            {capFirstLetter(props.data.moves[2].move.name)}
+                        </div>
+                        <div className="column">
+                            {capFirstLetter(props.data.moves[3].move.name)}
+                        </div>
                     </div>
                 </Card.Text>
                 <Button
