@@ -3,7 +3,7 @@ import { TeamContext } from '../components/TeamContext';
 import { PokemonCard } from '../components/PokemonCard';
 
 export const PokemonTeamPage = () => {
-    const { caughtPokemon, setCaughtPokemon } = useContext(TeamContext);
+    const { caughtPokemon } = useContext(TeamContext);
 
     return (
         <>

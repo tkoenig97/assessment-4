@@ -35,7 +35,7 @@ export const Header = () => {
             <Link to={'/team'}>My Team #{pokemonCount}</Link>
             <form onSubmit={handleSearch}>
                 <input name="search" placeholder="Search"></input>
-                <button type="submit">Search</button>
+                <button className='submit-button' type="submit">Search</button>
             </form>
         </div>
     );

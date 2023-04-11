@@ -17,6 +17,12 @@
     margin-top: 2%;
 }
 
+.submit-button {
+    background-color: #0B5ED7;
+    color: white;
+    margin-left: 10px;
+}
+
 /* PokemonCard.jsx */
 .card {
     text-align: center;
